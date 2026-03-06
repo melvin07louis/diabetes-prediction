@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("../images/home_image.png") no-repeat center center/cover;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background: rgba(67,113,159,0.9);
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar a {
+    color: white;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+    background: rgba(255,255,255,0.9);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2c80b4;
+}

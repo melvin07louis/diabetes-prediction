@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <div class="main">
+        <h1>Diabetes Risk Prediction</h1>
+        <form method="POST">
+            <label>Gender</label>
+            <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label>Age</label>
+            <input type="number" name="age" required>
+
+            <label>Hypertension</label>
+            <select name="hypertension">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Heart Disease</label>
+            <select name="heart_disease">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Smoking History</label>
+            <select name="smoking" required>
+                <option value="never">Never</option>
+                <option value="current">Current</option>
+                <option value="not current">Not Current</option>
+            </select>
+
+            <label>BMI</label>
+            <input type="number" step="0.1" name="bmi" required>
+
+            <label>HbA1c Level</label>
+            <input type="number" step="0.1" name="hba1c" required>
+
+            <label>Blood Glucose Level</label>
+            <input type="number" name="glucose" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if result %}
+            <h2>Prediction: {{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <h2>Login</h2>
+            <form method="POST">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="user name" name="User Name" placeholder="User name" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p style="color:red; text-align:center;">{{ error }}</p>
+        </div>
+    </div>
+</body>
+</html>
